@@ -1,2 +1,7 @@
-rootProject.name = 'spring.eureka.feign'
+rootProject.name = 'spring_service_eureka_feign'
+include 'eureka_service'
+include 'eureka_client'
+findProject(':eureka_service')?.name = 'eureka_service'
+findProject(':eureka_client')?.name = 'eureka_client'
+include 'feign_client'
 
